@@ -1,0 +1,139 @@
+
+<h2>Dostepne filmy</h2>
+
+
+
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+
+         <div class="form-group">
+
+<film-search></film-search>
+  </div>
+  <div class="btn-group">
+   <button type="button" class="button" (click)='sortByArgument("film.name")'>Sortuj po tytule</button>
+<button type="button" class="button" (click)='sortByArgument("film.category")'>Sortuj po kategorii</button>
+  </div>
+ <div>
+
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="buttonAdd" data-toggle="modal" data-target="#myModal">Dodaj nowy film</button>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Dodaj film: </h4>
+        </div>
+        <div class="modal-body">
+
+
+ <div class="col-sm-10" > 
+     <table class="tablica" style="margin-top: 0px;"  >
+        <tbody>
+      <tr>
+        <td style="background-color: white;"  >Tytuł filmu: </td>
+        <td ><input type="text" name="name" required #filmName /></td>
+      </tr>
+      <tr>
+        <td style="background-color: white;" >Kategoria filmu: </td>
+          <input type="text" required="true" #filmCategory />
+      </tr>
+      <tr>
+        <td style="background-color: white;">Rezyster: </td>
+        <td ><input type="text" required="true" #filmDirector /></td>
+      </tr>
+     
+    </tbody>
+  </table>
+   </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="add(filmName.value, filmCategory.value, filmDirector.value); filmName.value=''; filmCategory.value=''; filmDirector.value=''">Zamknij i zapisz</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+    </div>
+    <div class="col-sm-8 text-left"> 
+
+
+
+
+<table class="table table-hover table-inverse">
+
+  <thead>
+    <tr>
+      <th>Tytul</th>
+      <th>Kategoria</th>
+      <th>Dostepnosc</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let film of films" (click)="onSelect(film)" data-toggle="modal" data-target="#myModal5">
+      <td *ngIf="film.status!==false">{{film.name}}</td>
+      <td *ngIf="film.status!==false">{{film.category}}</td>
+      <td *ngIf="film.status!==false">{{film.status}}</td>
+      <button *ngIf="film.status!==false" class="btn btn-warning" (click)="onSelect(film)" (click)="gotoEdit()">edytuj</button>
+      <button *ngIf="film.status!==false" class="btn btn-danger" (click)="delete(film); $event.stopPropagation()">skasuj</button>
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+<div class="modal fade" id="myModal5" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Szczegóły filmu:  </h4>
+      </div>
+      <div class="modal-body">
+        <film-detail [film]="selectedFilm"></film-detail>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+     
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div><img class="cover" src="./photo/vhs.jpg" style="width: 70%; height: 70%;" align="right" alt="Brak zdjęcia" /></div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+

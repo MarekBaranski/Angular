@@ -1,0 +1,18 @@
+<div *ngIf="film">
+<div><img id="cover" src="./photo/{{film.image}}" style="width: 33%; height: 33%;" align="right" alt="Brak zdjęcia" /></div>
+  <h2>{{film.name}} </h2>
+  <div><label>id: </label>{{film.id}}</div>
+  <div><label>Tytul: </label>{{film.name}} </div>
+  <div><label>Kategoria: </label>{{film.category}} </div>
+  <div><label>Reżyser: </label>{{film.director}} </div>
+  <div><label>Rok:  </label>{{film.year}} </div>
+  <div *ngIf="film.status"><label>Dostępność:  </label>dostępny</div>
+  <div *ngIf="!film.status"><label>Dostępność:  </label>film wypożyczony</div>
+
+ 
+
+
+  <button (click)="lendFalse(film); $event.stopPropagation()">Wypozycz film</button>
+  <button (click)="lendTrue(film); $event.stopPropagation()">Oddaj film</button>
+
+</div>

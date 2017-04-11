@@ -1,0 +1,41 @@
+body{
+
+  background-color: #303030;
+}
+
+h1 {
+  font-size: 40px;
+  color: #e6b800;
+  margin-bottom: 1cm;
+  text-align: center;
+  margin-top: 1cm;
+  font-family: "Perfect DOS VGA 437";
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.button {
+    background-color: #e6b800;
+    border: none;
+    color: black;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav{
+
+margin-left: 260px;
+margin-bottom: 1cm;
+
+}
+
+

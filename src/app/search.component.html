@@ -1,0 +1,50 @@
+
+<div *ngIf="film" class="search">
+
+  
+ <div class="col-sm-4" id="tabela"> 
+     <table class="table table-hover table-inverse"  style="background-color: #303030;">
+    <thead>
+      <tr>
+       <h2  style="color: #e6b800;">{{film.name}}</h2>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color: #e6b800;">Id</td>
+        <td  style="color: #e6b800;">{{film.id}}</td>
+      </tr>
+      <tr>
+        <td style="color: #e6b800;">Tytul: </td>
+        <td  style="color: #e6b800;">{{film.name}}</td>
+        
+      </tr>
+      <tr>
+        <td style="color: #e6b800;">Kategoria: </td>
+        <td  style="color: #e6b800;">{{film.category}}</td>
+      </tr>
+       <tr>
+        <td style="color: #e6b800;">Reżyser: </td>
+        <td  style="color: #e6b800;">{{film.director}}</td>
+      </tr>
+       <tr>
+        <td style="color: #e6b800;">Rok: </td>
+        <td  style="color: #e6b800;">{{film.year}}</td>
+      </tr>
+      <tr>
+        <td style="color: #e6b800;">Dostępnośc: </td>
+        <td  style="color: #e6b800;" *ngIf="film.status">dostępny</td>
+        <td  style="color: #e6b800;" *ngIf="!film.status">film wypożyczony</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <button class="button" (click)="lendFalse(film); $event.stopPropagation()">Wypozycz film</button>
+  <button class="button" (click)="lendTrue(film); $event.stopPropagation()">Oddaj film</button>
+
+  <button class="button" routerLink="/films" >Powrót</button>
+   </div>
+
+</div>
+

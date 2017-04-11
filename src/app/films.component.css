@@ -1,0 +1,57 @@
+table{
+margin-top: 4cm;
+  background-color: #303030;
+   margin-left: 70px;
+}
+
+tablica{
+text-align: left;
+  background-color: white;
+ 
+}
+
+h2{
+text-align: center;
+  color: #e6b800;
+  font-size: 24px;
+  font-family: "Perfect DOS VGA 437";
+  
+}
+
+.button {
+    background-color: #e6b800;
+    border: none;
+    color: black;
+    width: 250px;
+    text-align: center;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 10px; 
+}
+
+.buttonAdd {
+    background-color: green;
+    border: none;
+    color: white;
+    width: 250px;
+    text-align: center;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 10px; 
+}
+
+.form-group{
+  
+  margin-left: auto;
+}
+.cover{
+
+  margin-right: 70px;
+}
+/*.btn-warning{
+
+  background-color: #e6b800;
+  color: black;
+}*/

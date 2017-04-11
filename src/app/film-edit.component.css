@@ -1,0 +1,37 @@
+.col-sm-6{
+
+  background-color: #303030;
+   margin-left:400px;
+  
+}
+
+.search{
+ color: #e6b800;
+ background-color: #303030;
+
+}
+h2{
+text-align: center;
+ background-color: #303030;
+  color: #e6b800;
+  font-size: 20px;
+  font-family: "Perfect DOS VGA 437";
+  
+}
+
+.button {
+    background-color: #e6b800;
+    border: none;
+    color: black;
+   
+    text-align: center;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 2px; 
+    margin-left:180px; 
+}
+
+table, th, td {
+   color: #e6b800;
+}
