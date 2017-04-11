@@ -42,9 +42,9 @@ var FilmService = (function () {
             .then(function () { return film; })
             .catch(this.handleError);
     };
-    FilmService.prototype.create = function (name, category, director) {
+    FilmService.prototype.create = function (name, category, director, year) {
         return this.http
-            .post(this.filmsUrl, JSON.stringify({ name: name, category: category, director: director, status: true }), { headers: this.headers })
+            .post(this.filmsUrl, JSON.stringify({ name: name, category: category, director: director, year: year, status: true }), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);

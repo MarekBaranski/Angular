@@ -3,7 +3,7 @@ id: number;
 name: string;
 category: string;
 director: string;
-year: string;
+year: number;
 status: boolean;
 image: string;
 }

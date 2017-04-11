@@ -34,7 +34,7 @@ var FilmsComponent = (function () {
     FilmsComponent.prototype.gotoEdit = function () {
         this.router.navigate(['/edit', this.selectedFilm.id]);
     };
-    FilmsComponent.prototype.add = function (name, category, director) {
+    FilmsComponent.prototype.add = function (name, category, director, year) {
         var _this = this;
         name = name.trim();
         category = category.trim();
@@ -48,7 +48,10 @@ var FilmsComponent = (function () {
         if (!director) {
             return;
         }
-        this.filmService.create(name, category, director)
+        if (!year) {
+            return;
+        }
+        this.filmService.create(name, category, director, year)
             .then(function (film) {
             _this.films.push(film);
             _this.selectedFilm = null;

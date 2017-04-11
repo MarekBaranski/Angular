@@ -41,9 +41,9 @@ export class FilmService {
       .catch(this.handleError);
   }
 
-  create(name: string, category: string, director: string): Promise<Film> {
+  create(name: string, category: string, director: string, year: number): Promise<Film> {
     return this.http
-      .post(this.filmsUrl, JSON.stringify({ name: name, category: category, director: director, status: true }), { headers: this.headers })
+      .post(this.filmsUrl, JSON.stringify({ name: name, category: category, director: director, year: year, status: true }), { headers: this.headers })
       .toPromise()
       .then(res => res.json().data as Film)
       .catch(this.handleError);
