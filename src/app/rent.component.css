@@ -19,7 +19,7 @@ a {
 }
 
 h5 {
-
+margin-left: 50px;
   color: #e6b800;
   font-family: "Perfect DOS VGA 437";
 }
@@ -71,7 +71,20 @@ h4 {
 
 .about{
 margin-top: 1cm;
+text-indent: 2cm;
+line-height: 20px;
   color: white;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.about2{
+margin-top: 1cm;
+text-indent: 2cm;
+line-height: 20px;
+  color: white;
+  text-align: justify;
+   font-size: 14px;
 }
 
 .col-md-11{

@@ -6,6 +6,7 @@ import { FilmDetailComponent }  from './film-detail.component';
 import { RentfilmComponent } from './rentfilm.component';
 import { FilmEditComponent }  from './film-edit.component';
 import { SearchComponent }  from './search.component';
+import { ReturnComponent }  from './return.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/rent', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'films',     component: FilmsComponent },
   { path: 'rentfilms',     component: RentfilmComponent },
   { path: 'edit/:id',     component: FilmEditComponent },
-  { path: 'search/:id',     component: SearchComponent }
+  { path: 'search/:id',     component: SearchComponent },
+   { path: 'return',     component: ReturnComponent }
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],

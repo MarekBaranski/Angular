@@ -13,6 +13,7 @@ var film_detail_component_1 = require("./film-detail.component");
 var rentfilm_component_1 = require("./rentfilm.component");
 var film_edit_component_1 = require("./film-edit.component");
 var search_component_1 = require("./search.component");
+var return_component_1 = require("./return.component");
 var routes = [
     { path: '', redirectTo: '/rent', pathMatch: 'full' },
     { path: 'rent', component: rent_component_1.RentComponent },
@@ -20,7 +21,8 @@ var routes = [
     { path: 'films', component: films_component_1.FilmsComponent },
     { path: 'rentfilms', component: rentfilm_component_1.RentfilmComponent },
     { path: 'edit/:id', component: film_edit_component_1.FilmEditComponent },
-    { path: 'search/:id', component: search_component_1.SearchComponent }
+    { path: 'search/:id', component: search_component_1.SearchComponent },
+    { path: 'return', component: return_component_1.ReturnComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

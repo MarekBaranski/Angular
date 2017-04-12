@@ -22,6 +22,7 @@ var rentfilm_component_1 = require("./rentfilm.component");
 var film_search_component_1 = require("./film-search.component");
 var film_edit_component_1 = require("./film-edit.component");
 var search_component_1 = require("./search.component");
+var return_component_1 = require("./return.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -44,7 +45,8 @@ AppModule = __decorate([
             rentfilm_component_1.RentfilmComponent,
             film_search_component_1.FilmSearchComponent,
             film_edit_component_1.FilmEditComponent,
-            search_component_1.SearchComponent
+            search_component_1.SearchComponent,
+            return_component_1.ReturnComponent
         ],
         providers: [
             film_service_1.FilmService

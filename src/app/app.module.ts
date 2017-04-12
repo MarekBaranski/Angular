@@ -19,6 +19,7 @@ import { RentfilmComponent } from './rentfilm.component';
 import { FilmSearchComponent } from './film-search.component';
 import { FilmEditComponent } from './film-edit.component';
 import { SearchComponent }  from './search.component';
+import { ReturnComponent }  from './return.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { SearchComponent }  from './search.component';
     RentfilmComponent,
     FilmSearchComponent,
     FilmEditComponent,
-     SearchComponent
+     SearchComponent,
+     ReturnComponent
   ],
   providers: [
     FilmService

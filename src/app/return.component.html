@@ -1,0 +1,18 @@
+
+<h3>Wypożyczenie filmu: 10zl </h3>
+
+
+
+    <div class="checkbox">
+      <label><input type="checkbox" value="" (click)="setBrokenTape()">Cz kaseta jest złamana?</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="" (click)="setUnrewindedTape()">Czy kaseta jest przewinięta?</label>
+    </div>
+    <div>
+      <label><input type="number" [(ngModel)]="delay" value="0"/>ilość dni spóżnienia</label>
+    </div>
+ 
+
+<h2>Razem do zapłaty: </h2> 
+<h3>{{rent+delay*3+resume}}</h3>

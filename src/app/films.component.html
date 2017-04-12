@@ -130,7 +130,7 @@
   </thead>
   <tbody>
 
-    <tr *ngFor="let film of films" (click)="onSelect(film)" data-toggle="modal" data-target="#myModal5">
+    <tr *ngFor="let film of films" (click)="onSelect(film)" data-toggle="modal" data-target="#myModal5" >
       <td *ngIf="film.status!==false">{{film.name}}</td>
       <td *ngIf="film.status!==false">{{film.category}}</td>
       <td *ngIf="film.status!==false">{{film.status}}</td>

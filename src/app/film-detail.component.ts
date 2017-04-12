@@ -3,6 +3,9 @@ import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import { FilmService } from './film.service';
 import {Film} from './film';
+import { Router} from '@angular/router';
+import { NgModule }      from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -18,7 +21,8 @@ export class FilmDetailComponent implements OnInit {
   constructor(
     private filmService: FilmService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+     private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -42,5 +46,6 @@ export class FilmDetailComponent implements OnInit {
   lendTrue(film: Film): void {
   this.filmService.changeStatusOnTrue(film);
 
-  }
+}
+ 
 }
