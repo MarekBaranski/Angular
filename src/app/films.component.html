@@ -40,27 +40,70 @@
   
   <div class="form-group">
     <label>Tytuł filmu: </label>
-    <input type="text" class="form-control"  required  #filmName placeholder="tytuł..." />
-    
+    <input class="form-control"  id="titleFilm" type="text"   name="filmTitle" minlength=3 required="true"  placeholder="tytuł..." [(ngModel)]="filmTitle" #filmName="ngModel" />
+
   </div>
+  <div *ngIf="filmName.errors && (filmName.dirty || filmName.touched)"
+     class="alert alert-danger">
+     <div [hidden]="!filmName.errors.required">
+      Pole jest puste!
+    </div>
+    <div [hidden]="!filmName.errors.minlength">
+      Pole wymaga minimum 3 znaków!
+    </div>
+        </div> 
+    
    
   <div class="form-group">
     <label>Kategoria filmu: </label>
-    <input type="text" class="form-control"  required #filmCategory placeholder="kategoria..." />
+    
+     <input class="form-control" id="categoryFilm" type="text" name="categoryOfFilm" minlength=3 required="true"  placeholder="kategoria..."  [(ngModel)]="categoryOfFilm" #filmCategory="ngModel" />
   </div>
   <div class="form-group">
+
+<div *ngIf="filmCategory.errors && (filmCategory.dirty || filmCategory.touched)"
+     class="alert alert-danger">
+     <div [hidden]="!filmCategory.errors.required">
+      Pole jest puste!
+    </div>
+    <div [hidden]="!filmCategory.errors.minlength">
+      Pole wymaga minimum 3 znaków!
+    </div>
+        </div> 
+
+
     <label>Reżyser: </label>
-    <input type="text" class="form-control" required #filmDirector placeholder="Reżyser..." />
+     <input class="form-control" id="directorFilm" type="text" name="directorOfFilm" minlength=3 required="true"  placeholder="reżyser..."  [(ngModel)]="directorOfFilm" #filmDirector="ngModel" />
   </div>
   <div class="form-group">
+
+<div *ngIf="filmDirector.errors && (filmDirector.dirty || filmDirector.touched)"
+     class="alert alert-danger">
+     <div [hidden]="!filmDirector.errors.required">
+      Pole jest puste!
+    </div>
+    <div [hidden]="!filmDirector.errors.minlength">
+      Pole wymaga minimum 3 znaków!
+    </div>
+        </div> 
+
+
     <label>Rok: </label>
-    <input type="number" class="form-control" required #filmYear placeholder="Rok..." />
+ 
+    <input class="form-control" id="yearFilm"type="number" name="yearOfFilm" required="true"  placeholder="rok..."  [(ngModel)]="yearOfFilm" #filmYear="ngModel" />
   </div>
+  <div *ngIf="filmYear.errors && (filmYear.dirty || filmYear.touched)"
+     class="alert alert-danger">
+     <div [hidden]="!filmYear.errors.required">
+      Pole jest puste!
+    </div>
+   
+        </div> 
  
 </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-default" data-dismiss="modal" (click)="add(filmName.value, filmCategory.value, filmDirector.value, filmYear.value); filmName.value=''; filmCategory.value=''; filmDirector.value=''; filmYear.value=''">Zamknij i zapisz</button>
+          <button [disabled]='!filmAdd.form.valid'type="submit" class="btn btn-default" data-dismiss="modal" (click)="add(filmName.value, filmCategory.value, filmDirector.value, filmYear.value); filmName.value=''; filmCategory.value=''; filmDirector.value=''; filmYear.value=''">Zamknij i zapisz</button>
         </div>
       </div>
 

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Film} from './film';
 import { FilmService} from './film.service';
 import { Router} from '@angular/router';
+import { NgModule }      from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 
 @Component({

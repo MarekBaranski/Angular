@@ -46,14 +46,15 @@ export class RentfilmComponent implements OnInit {
   }
 
 
-  add(name: string, category: string, director: string): void {
+  add(name: string, category: string, director: string, year: number): void {
     name = name.trim();
     category = category.trim();
     director = director.trim();
     if (!name) { return; }
     if (!category) { return; }
     if (!director) { return; }
-    this.filmService.create(name, category, director)
+    if (!year) { return; }
+    this.filmService.create(name, category, director, year)
       .then(film => {
         this.films.push(film);
         this.selectedFilm = null;
