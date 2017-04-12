@@ -1,93 +1,86 @@
-
-
 <div *ngIf="film" class="search">
 
-  
- <div class="col-sm-6" id="tabela"> 
-     <table class="table table-hover table-inverse"  style="background-color: #303030;">
-    <thead>
-      <tr>
-       <h2  >{{film.name}}</h2>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td >Tytul: </td>
-        <td  >{{film.name}}</td>
-        <td> <input class="form-control" film.name="name" required minlength="3" #name="ngModel" [(ngModel)]="film.name" placeholder="tytuł..." /></td> 
-      
-      </tr>
-           <div *ngIf="name.errors && (name.dirty || name.touched)"
-     class="alert alert-danger">
-     <div [hidden]="!name.errors.required">
-      Pole jest puste!
-    </div>
-    <div [hidden]="!name.errors.minlength">
-      Pole wymaga minimum 3 znaków!
-    </div>
-        </div> 
-      <tr>
-        <td >Kategoria: </td>
-        <td >{{film.category}}</td>
-        <td> <input  class="form-control" film.category="category" required minlength="3" #category="ngModel" [(ngModel)]="film.category" placeholder="kategoria..." /></td>
-      </tr>
-       <div *ngIf="category.errors && (category.dirty || category.touched)"
-     class="alert alert-danger">
-     <div [hidden]="!category.errors.required">
-      Pole jest puste!
-    </div>
-    <div [hidden]="!category.errors.minlength">
-      Pole wymaga minimum 3 znaków!
-    </div>
-        </div> 
-       <tr>
-        <td >Reżyser: </td>
-        <td  >{{film.director}}</td>
-        <td> <input  class="form-control" film.director="director" required minlength="3" #director="ngModel"  [(ngModel)]="film.director" placeholder="reżyser..." /></td>
-      </tr>
-       <div *ngIf="director.errors && (director.dirty || director.touched)"
-     class="alert alert-danger">
-     <div [hidden]="!director.errors.required">
-      Pole jest puste!
-    </div>
-    <div [hidden]="!director.errors.minlength">
-      Pole wymaga minimum 3 znaków!
-    </div>
-        </div> 
-       <tr>
-        <td >Rok: </td>
-        <td >{{film.year}}</td>
-        <td> <input class="form-control"  type="number" required required  #year="ngModel"  [(ngModel)]="film.year" placeholder="rok..." /></td>
-      </tr>
-       <div *ngIf="year.errors && (year.dirty || year.touched)"
-     class="alert alert-danger">
-     <div [hidden]="!year.errors.required">
-      Pole jest puste!
-    </div>
-       </div> 
-      <tr>
-       <td >Okładka: </td>
-        <td >{{film.image}}</td>
-        <td> <input class="form-control" film.image="image" required minlength="3" #image="ngModel" [(ngModel)]="film.image" placeholder="sciezka zdjecia..." /> </td>
-      </tr>
-      <div *ngIf="image.errors && (image.dirty || image.touched)"
-     class="alert alert-danger">
-     <div [hidden]="!image.errors.required">
-      Pole jest puste!
-    </div>
-    <div [hidden]="!image.errors.minlength">
-      Pole wymaga minimum 3 znaków!
-    </div>
-        </div> 
-    </tbody>
-  </table>
 
- <button class="button" (click)="goBack()">Powrót</button>
-  <button  class="button" (click)="save()">Zapisz</button>
-  
+  <div class="col-sm-6" id="tabela">
+    <h3>Tytul: {{film.name}}</h3>
+    <table class="table table-hover table-inverse" style="background-color: #303030;">
 
-    </div>
+      <tbody>
+        <tr>
+          <td>Tytul: </td>
+          <td>{{film.name}}</td>
+          <td> <input class="form-control" film.name="name" required minlength="3" #name="ngModel" [(ngModel)]="film.name" placeholder="tytuł..."
+            /></td>
+
+        </tr>
+        <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+          <div [hidden]="!name.errors.required">
+            Pole jest puste!
+          </div>
+          <div [hidden]="!name.errors.minlength">
+            Pole wymaga minimum 3 znaków!
+          </div>
+        </div>
+        <tr>
+          <td>Kategoria: </td>
+          <td>{{film.category}}</td>
+          <td> <input class="form-control" film.category="category" required minlength="3" #category="ngModel" [(ngModel)]="film.category"
+              placeholder="kategoria..." /></td>
+        </tr>
+        <div *ngIf="category.errors && (category.dirty || category.touched)" class="alert alert-danger">
+          <div [hidden]="!category.errors.required">
+            Pole jest puste!
+          </div>
+          <div [hidden]="!category.errors.minlength">
+            Pole wymaga minimum 3 znaków!
+          </div>
+        </div>
+        <tr>
+          <td>Reżyser: </td>
+          <td>{{film.director}}</td>
+          <td> <input class="form-control" film.director="director" required minlength="3" #director="ngModel" [(ngModel)]="film.director"
+              placeholder="reżyser..." /></td>
+        </tr>
+        <div *ngIf="director.errors && (director.dirty || director.touched)" class="alert alert-danger">
+          <div [hidden]="!director.errors.required">
+            Pole jest puste!
+          </div>
+          <div [hidden]="!director.errors.minlength">
+            Pole wymaga minimum 3 znaków!
+          </div>
+        </div>
+        <tr>
+          <td>Rok: </td>
+          <td>{{film.year}}</td>
+          <td> <input class="form-control" type="number" required required #year="ngModel" [(ngModel)]="film.year" placeholder="rok..."
+            /></td>
+        </tr>
+        <div *ngIf="year.errors && (year.dirty || year.touched)" class="alert alert-danger">
+          <div [hidden]="!year.errors.required">
+            Pole jest puste!
+          </div>
+        </div>
+        <tr>
+          <td>Okładka: </td>
+          <td>{{film.image}}</td>
+          <td> <input class="form-control" film.image="image" required minlength="3" #image="ngModel" [(ngModel)]="film.image"
+              placeholder="sciezka zdjecia..." /> </td>
+        </tr>
+        <div *ngIf="image.errors && (image.dirty || image.touched)" class="alert alert-danger">
+          <div [hidden]="!image.errors.required">
+            Pole jest puste!
+          </div>
+          <div [hidden]="!image.errors.minlength">
+            Pole wymaga minimum 3 znaków!
+          </div>
+        </div>
+      </tbody>
+    </table>
+
+    <button class="button" (click)="goBack()">Powrót</button>
+    <button class="button" (click)="save()">Zapisz</button>
+
+
+  </div>
 
 </div>
-     
-

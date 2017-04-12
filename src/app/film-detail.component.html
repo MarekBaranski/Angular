@@ -12,14 +12,14 @@
 
 
 
-  <button *ngIf="film.status" (click)="lendFalse(film); $event.stopPropagation()">Wypozycz film</button>
-  <!--<button (click)="lendTrue(film); $event.stopPropagation()">Oddaj film</button>-->
+  <button *ngIf="film.status" type="submit" (click)="lendFalse(film);" data-dismiss="modal">Wypozycz film</button>
+
 
 
 
 
   <!-- Trigger the modal with a button -->
-  <button *ngIf="!film.status" type="submit" data-toggle="modal" data-target="#myModal9">Oddaj film</button>
+  <button *ngIf="!film.status" type="submit" (click)="lendTrue(film);" data-toggle="modal" data-target="#myModal9">Oddaj film</button>
 
   <!-- Modal -->
   <div id="myModal9" class="modal fade" role="dialog">
@@ -39,7 +39,8 @@
           </form>
           <div class="modal-footer">
 
-            <button type="submit" (click)="lendTrue(film); $event.stopPropagation();" data-dismiss="modal">Oddaj film</button>
+         
+            <button type="submit" data-dismiss="modal">zamknij</button>
           </div>
         </div>
 

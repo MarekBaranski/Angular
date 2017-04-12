@@ -45,6 +45,10 @@ export class RentfilmComponent implements OnInit {
     this.router.navigate(['/edit', this.selectedFilm.id]);
   }
 
+  gotoReturn(): void {
+    this.router.navigate(['/return', this.selectedFilm.id]);
+  }
+
 
   add(name: string, category: string, director: string, year: number): void {
     name = name.trim();
@@ -93,4 +97,6 @@ export class RentfilmComponent implements OnInit {
     if(a.category == b.category) { return 0; }
     return -1;
   }
+
+ 
 }

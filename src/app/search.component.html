@@ -40,10 +40,46 @@
   </table>
 
 
-  <button class="button" (click)="lendFalse(film); $event.stopPropagation()">Wypozycz film</button>
-  <button class="button" (click)="lendTrue(film); $event.stopPropagation()">Oddaj film</button>
+   <button class="button" *ngIf="film.status" (click)="lendFalse(film);">Wypozycz film</button>
 
-  <button class="button" routerLink="/films" >Powrót</button>
+
+
+
+
+  <!-- Trigger the modal with a button -->
+  <button class="button" *ngIf="!film.status" type="submit" (click)="lendTrue(film);" data-toggle="modal" data-target="#myModal10">Oddaj film</button>
+
+  <!-- Modal -->
+  <div id="myModal10" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h4 class="modal-title">Naliczanie opłaty</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <return></return>
+          </form>
+          <div class="modal-footer">
+
+         
+            <button  type="submit" data-dismiss="modal">zamknij</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <button class="button" routerLink="/rent" >Powrót</button>
    </div>
 
 </div>

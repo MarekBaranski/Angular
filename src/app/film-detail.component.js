@@ -40,7 +40,9 @@ var FilmDetailComponent = (function () {
         this.filmService.changeStatusOnFalse(film);
     };
     FilmDetailComponent.prototype.lendTrue = function (film) {
-        this.filmService.changeStatusOnTrue(film);
+        var _this = this;
+        this.filmService.changeStatusOnTrue(film)
+            .then(function () { return _this.goBack(); });
     };
     return FilmDetailComponent;
 }());

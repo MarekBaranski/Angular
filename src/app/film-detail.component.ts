@@ -44,7 +44,8 @@ export class FilmDetailComponent implements OnInit {
   }
 
   lendTrue(film: Film): void {
-  this.filmService.changeStatusOnTrue(film);
+  this.filmService.changeStatusOnTrue(film)
+  .then(() => this.goBack());
 
 }
  

@@ -34,6 +34,9 @@ var RentfilmComponent = (function () {
     RentfilmComponent.prototype.gotoEdit = function () {
         this.router.navigate(['/edit', this.selectedFilm.id]);
     };
+    RentfilmComponent.prototype.gotoReturn = function () {
+        this.router.navigate(['/return', this.selectedFilm.id]);
+    };
     RentfilmComponent.prototype.add = function (name, category, director, year) {
         var _this = this;
         name = name.trim();

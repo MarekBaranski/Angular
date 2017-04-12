@@ -6,7 +6,7 @@
 }
 
 .search{
- color: #e6b800;
+ 
  background-color: #303030;
 
 }
@@ -30,4 +30,7 @@ text-align: center;
     cursor: pointer;
     margin-bottom: 2px; 
     margin-left:70px; 
+}
+table{
+  color: #e6b800;
 }

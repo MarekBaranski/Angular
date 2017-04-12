@@ -32,6 +32,12 @@ text-align: center;
     margin-left:180px; 
 }
 
-table, th, td {
+td {
    color: #e6b800;
+   width: 300px;
+}
+
+h3{
+ color: #e6b800;
+
 }
