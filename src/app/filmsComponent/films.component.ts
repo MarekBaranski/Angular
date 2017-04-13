@@ -25,7 +25,7 @@ export class FilmsComponent implements OnInit {
     private filmService: FilmService,
     private router: Router) { }
 
-
+ 
 
   getFilms(): void {
     this.filmService.getFilms().then(films => this.films = films);
