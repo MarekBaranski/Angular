@@ -6,8 +6,8 @@
   <div><label>Kategoria: </label>{{film.category}} </div>
   <div><label>Reżyser: </label>{{film.director}} </div>
   <div><label>Rok:  </label>{{film.year}} </div>
-  <div *ngIf="film.status"><label>Dostępność:  </label>dostępny</div>
-  <div *ngIf="!film.status"><label>Dostępność:  </label>film wypożyczony</div>
+  <div *ngIf="film.status"><label>Dostępność:  </label><p>dostępny</p></div>
+  <div *ngIf="!film.status"><label>Dostępność:  </label><p>film wypożyczony</p></div>
 
 
 

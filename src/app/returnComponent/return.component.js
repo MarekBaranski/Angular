@@ -9,16 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var common_1 = require("@angular/common");
-var film_service_1 = require("../filmService/film.service");
-var router_2 = require("@angular/router");
 var ReturnComponent = (function () {
-    function ReturnComponent(filmService, route, location, router) {
-        this.filmService = filmService;
-        this.route = route;
-        this.location = location;
-        this.router = router;
+    function ReturnComponent() {
         this.rent = 10;
         this.delay = 0;
         this.unrewindedTape = false;
@@ -53,10 +45,7 @@ ReturnComponent = __decorate([
         templateUrl: './return.component.html',
         styleUrls: ['./return.component.css']
     }),
-    __metadata("design:paramtypes", [film_service_1.FilmService,
-        router_1.ActivatedRoute,
-        common_1.Location,
-        router_2.Router])
+    __metadata("design:paramtypes", [])
 ], ReturnComponent);
 exports.ReturnComponent = ReturnComponent;
 //# sourceMappingURL=return.component.js.map

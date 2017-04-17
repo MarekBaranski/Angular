@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
+
 import { FilmService } from '../filmService/film.service';
 import { Film } from '../film/film';
-import { Router } from '@angular/router';
+
 import { NgModule }      from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
@@ -21,10 +20,8 @@ export class ReturnComponent {
   resume: number;
 
 
-  constructor(private filmService: FilmService,
-    private route: ActivatedRoute,
-    private location: Location,
-    private router: Router) {
+  constructor(//private filmService: FilmService,
+    ) {
     this.rent = 10;
       this.delay = 0;
       this.unrewindedTape = false;
